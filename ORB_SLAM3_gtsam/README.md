@@ -79,6 +79,18 @@ Required to calculate the alignment of the trajectory with the ground truth. **R
 
 We provide some examples to process input of a monocular, monocular-inertial, stereo, stereo-inertial or RGB-D camera using ROS. Building these examples is optional. These have been tested with ROS Melodic under Ubuntu 18.04.
 
+##Gtsam
+down the 4.0.0 gtsam from link:
+https://codeload.github.com/borglab/gtsam/zip/refs/tags/4.0.0-alpha2
+
+then following the command:
+'''
+mkdir build
+cd build
+cmake ..
+sudo make install
+'''
+
 # 3. Building ORB-SLAM3 library and examples
 
 Clone the repository:
