@@ -41,9 +41,12 @@ MESSAGE(${OpenCV_VERSION})
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
 find_package(realsense2)
+
+#adds-on
 find_package(Boost 	REQUIRED COMPONENTS system serialization graph)
 find_package(GTSAMCMakeTools)
 set(GTSAM_LIBRARIES gtsam tbb tbbmalloc)
+#adds-on
 
 include_directories(
 ${PROJECT_SOURCE_DIR}
@@ -54,10 +57,14 @@ ${EIGEN3_INCLUDE_DIR}
 ${Pangolin_INCLUDE_DIRS}
 )
 
+#adds-on
 include(GtsamBuildTypes)
+#adds-on
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
+
+#add src/GtsamTransformer.cpp, include/GtsamTransformer.h, include/GtsamSerializationHelper.h
 add_library(${PROJECT_NAME} SHARED
 src/System.cc
 src/Tracking.cc
@@ -123,6 +130,8 @@ include/GtsamSerializationHelper.h)
 
 add_subdirectory(Thirdparty/g2o)
 
+
+#add "${GTSAM_LIBRARIES} ${BOOSE_LIBRARIES}"
 target_link_libraries(${PROJECT_NAME}
 ${OpenCV_LIBS}
 ${EIGEN3_LIBS}
