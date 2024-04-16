@@ -49,6 +49,7 @@ bool sortByVal(const pair<MapPoint*, int> &a, const pair<MapPoint*, int> &b)
     return (a.second < b.second);
 }
 
+//add input: GtsamTransformer *gtsam_transformer
 void Optimizer::GlobalBundleAdjustemnt(Map* pMap, int nIterations, bool* pbStopFlag, const unsigned long nLoopKF, const bool bRobust, GtsamTransformer *gtsam_transformer)
 {
     vector<KeyFrame*> vpKFs = pMap->GetAllKeyFrames();
@@ -57,6 +58,7 @@ void Optimizer::GlobalBundleAdjustemnt(Map* pMap, int nIterations, bool* pbStopF
 }
 
 
+//add input: GtsamTransformer *gtsam_transformer
 void Optimizer::BundleAdjustment(const vector<KeyFrame *> &vpKFs, const vector<MapPoint *> &vpMP,
                                  int nIterations, bool* pbStopFlag, const unsigned long nLoopKF, const bool bRobust, GtsamTransformer *gtsam_transformer)
 {
@@ -387,7 +389,10 @@ void Optimizer::BundleAdjustment(const vector<KeyFrame *> &vpKFs, const vector<M
             pMP->mnBAGlobalForKF = nLoopKF;
         }
     }
+
+    /*****adds-on****/
     gtsam_transformer->transformGraphToGtsam(vpKFs, vpMP);
+    /****************/
 }
 
 void Optimizer::FullInertialBA(Map *pMap, int its, const bool bFixLocal, const long unsigned int nLoopId, bool *pbStopFlag, bool bInit, float priorG, float priorA, Eigen::VectorXd *vSingVal, bool *bHess)
@@ -1494,7 +1499,11 @@ void Optimizer::LocalBundleAdjustment(KeyFrame *pKF, bool* pbStopFlag, Map* pMap
         pMP->SetWorldPos(vPoint->estimate().cast<float>());
         pMP->UpdateNormalAndDepth();
     }
+
+    /****adds-on****/
     gtsam_transformer->transformGraphToGtsam(vpKFs, vpMP);
+    /***************/
+    
     pMap->IncreaseChangeIndex();
 }
 
