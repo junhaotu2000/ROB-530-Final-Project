@@ -25,7 +25,10 @@
 #include "KeyFrame.h"
 #include "LoopClosing.h"
 #include "Frame.h"
+
+//adds-on
 #include "GtsamTransformer.h"
+//adds-on
 
 #include <math.h>
 
@@ -48,6 +51,7 @@ class Optimizer
 {
 public:
 
+    //adds GtsamTransformer *gtsam_transformer = nullptr for Bundle, GlobalBundle and LocalBundle
     void static BundleAdjustment(const std::vector<KeyFrame*> &vpKF, const std::vector<MapPoint*> &vpMP,
                                  int nIterations = 5, bool *pbStopFlag=NULL, const unsigned long nLoopKF=0,
                                  const bool bRobust = true, GtsamTransformer *gtsam_transformer = nullptr);
