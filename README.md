@@ -98,37 +98,11 @@ chmod +x build.sh
 ---
 
 # 5. Prepare for dataset & run simulations
-Here we use EuRoC dataset as sample`
-`Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.`
-`Make a folder named "dataset" in ORB-SLAM3, and unzip the dataset into this folder.
 ```shell
 #here we use MH_01_easy dataset
+#Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.
+#Make a folder named "dataset" in ORB-SLAM3, and unzip the dataset into this folder.
+#open terminal in ORB-SLAM folder
+
+./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ./dataset/MH_01_easy ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt
 ```
-Similar for another datasets in EuRoc see here [https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets]
-
-
-# 3. Run simulation 
-```shell
-cd ~/Dev/ORB_SLAM3
-
-# Pick of them below that you want to run
-
-# Mono
-./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt dataset-MH01_mono
-
-# Mono + Inertial
-./Examples/Monocular-Inertial/mono_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Monocular-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_monoi
-
-# Stereo
-./Examples/Stereo/stereo_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Stereo/EuRoC_TimeStamps/MH01.txt dataset-MH01_stereo
-
-# Stereo + Inertial
-./Examples/Stereo-Inertial/stereo_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Stereo-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_stereoi
-```
-
-
-revised code:
-  1. Optimizer.cc
-  2. CMakeList.txt
-  3. Optimizer.h
-  4. add some gtsam files
