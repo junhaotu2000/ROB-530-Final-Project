@@ -1,24 +1,25 @@
 # Installation guide for ORB-SLAM3
-# 1. Installation of all library dependencies
+# Prerequisites
+Make sure your system is up to date and has the required tools installed:
 ```shell
-
-sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
 sudo apt update
-
 sudo apt-get install build-essential
+```
+---
+
+# Step 1: Install Dependencies
+Install necessary libraries to ensure all features and functionalities fo ORB-SLAM3 will work:
+```shell
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev libjasper-dev
-
 sudo apt-get install libglew-dev libboost-all-dev libssl-dev
-
 sudo apt install libeigen3-dev
 
 ```
 ---
 
-# 2. Install OpenCV 3.2.0 & Pangolin & boost
-### Install OpenCV
+# Step 2: Install OpenCV 3.2.0
+Clone and compile OpenCV 3.2.0:
 ```shell
 cd ~
 mkdir Dev && cd Dev
@@ -38,8 +39,10 @@ cmake -D CMAKE_BUILD_TYPE=Release -D WITH_CUDA=OFF -D CMAKE_INSTALL_PREFIX=/usr/
 make -j 3 #adjust the number based on your GPU
 sudo make install
 ```
+---
 
-### Install Pangolin
+# Step 3: Install Pangolin
+Install Pangolin for handling OpenGL dependencies:
 ```shell
 cd ~/Dev
 git clone https://github.com/stevenlovegrove/Pangolin.git
@@ -50,26 +53,29 @@ cmake .. -D CMAKE_BUILD_TYPE=Release
 make -j 3 #adjust the number based on your GPU
 sudo make install
 ```
+---
 
-### Install Boost
+# Step 4: Install Boost
+Download and install the Boost libraries:
 ```shell
-#download from official site: https://www.boost.org/users/download/
 #target version is: boost_1_79_0.tar.gz
-#unzip the file to Dev (where you clone the OpenCV and Pangolin)
 cd ~/Dev
+wget https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.gz
+tar xzvf boost_1_79_0.tar.gz
 cd boost_1_79_0
 sudo ./bootstrap.sh
 sudo ./b2 install
 ```
-
 ---
 
-# 3. Install GTSAM 4.0.0
+
+# Step 5: Install GTSAM 4.0.0
+Download and install GTSAM, which is used for optimized graph-based nonlinear error functions:
 ```shell
-#Firstly, download the required gtsam version from link: https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
-#Secondly, unzip the file to folder "Dev" (where you clone the OpenCV and Pangolin)
 cd ~/Dev
-cd gtsam #change the name corresponding to your folder name
+wget https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
+unzip 4.0.0-alpha2.zip -d .
+cd gtsam-4.0.0-alpha2  # Adjust the directory name based on the extracted folder
 mkdir build
 cd build
 cmake ..
@@ -78,7 +84,7 @@ sudo make install
 ---
 
 
-# 4. Install ORB-SLAM3
+# Step 6: Install ORB-SLAM3
 ```shell
 cd ~/Dev
 git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git 
@@ -97,7 +103,7 @@ chmod +x build.sh
 ```
 ---
 
-# 5. Prepare for dataset & run simulations
+# Step 7: Prepare for dataset & run simulations
 ```shell
 #here we use MH_01_easy dataset
 #Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.
@@ -106,3 +112,9 @@ chmod +x build.sh
 
 ./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ./dataset/MH_01_easy ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt
 ```
+---
+
+
+# Reference:
+Uz-SLAMLab, “GitHub - UZ-SLAMLab/ORB_SLAM3: ORB-SLAM3: an accurate Open-Source library for Visual, Visual-Inertial and Multi-Map SLAM,” GitHub. https://github.com/UZ-SLAMLab/ORB_SLAM3
+Orsalmon, “GitHub - orsalmon/ORB_SLAM2_GTSAM: ORB-SLAM2 Library with an extension of GTSAM Factor Graph Streaming,” GitHub. https://github.com/orsalmon/ORB_SLAM2_GTSAM
