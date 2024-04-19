@@ -78,11 +78,7 @@ sudo make install
 ---
 
 
-# 3. Install OpenCV 3.2.0
-
-### ORB-SLAM 3
-Now, we install ORB-SLAM3. I used the commit version ef9784101fbd28506b52f233315541ef8ba7af57 tag: v0.3-beta
-
+# 3. Install ORB-SLAM3
 ```shell
 cd ~/Dev
 git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git 
@@ -95,13 +91,10 @@ to
 `Eigen::aligned_allocator<std::pair<KeyFrame *const, g2o::Sim3> > > KeyFrameAndPose;`
 in order to make this comiple.  
 Now, we can comiple ORB-SLAM3 and it dependencies as DBoW2 and g2o.  
-
-Now Simply just run (if you encounter compiler, try to run the this shell script 2 or 3 more time. It works for me.)
 ```shell
+chmod +x build.sh
 ./build.sh
 ```
-to install  
-
 ---
 
 # 2. Download test datasets
