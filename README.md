@@ -17,7 +17,7 @@ sudo apt install libeigen3-dev
 ```
 ---
 
-# 2. Install OpenCV 3.2.0 & Pangolin
+# 2. Install OpenCV 3.2.0 & Pangolin & boost
 ### Install OpenCV
 ```shell
 cd ~
@@ -50,6 +50,18 @@ cmake .. -D CMAKE_BUILD_TYPE=Release
 make -j 3 #adjust the number based on your GPU
 sudo make install
 ```
+
+### Install Boost
+```shell
+#download from official site: https://www.boost.org/users/download/
+#target version is: boost_1_79_0.tar.gz
+#unzip the file to Dev (where you clone the OpenCV and Pangolin)
+cd ~/Dev
+cd boost_1_79_0
+sudo ./bootstrap.sh
+sudo ./b2 install
+```
+
 ---
 
 # 3. Install GTSAM 4.0.0
@@ -58,7 +70,12 @@ sudo make install
 #Secondly, unzip the file to folder "Dev" (where you clone the OpenCV and Pangolin)
 cd ~/Dev
 cd gtsam #change the name corresponding to your folder name
+mkdir build
+cd build
+cmake ..
+sudo make install
 ```
+---
 
 
 # 3. Install OpenCV 3.2.0
@@ -120,15 +137,6 @@ cd ~/Dev/ORB_SLAM3
 ./Examples/Stereo-Inertial/stereo_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Stereo-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_stereoi
 ```
 
-for 4.0.0 gtsam install
-  1. download from link:
-https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
-  2. unzip the file
-  3. cd /filename
-  4. mkdir build
-  5. cd build
-  6. cmake ..
-  7. sudo make install
 
 revised code:
   1. Optimizer.cc
