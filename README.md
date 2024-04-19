@@ -98,8 +98,9 @@ chmod +x build.sh
 ---
 
 # 5. Prepare for dataset & run simulations
-Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.
-Make a folder named "dataset" in ORB-SLAM3, and unzip the dataset into this folder.
+Here we use EuRoC dataset as sample`
+`Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.`
+`Make a folder named "dataset" in ORB-SLAM3, and unzip the dataset into this folder.
 ```shell
 #here we use MH_01_easy dataset
 ```
