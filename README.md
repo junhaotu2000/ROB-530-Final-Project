@@ -53,8 +53,13 @@ sudo make install
 ---
 
 # 3. Install GTSAM 4.0.0
+```shell
 #Firstly, download the required gtsam version from link: https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
 #Secondly, unzip the file to folder "Dev" (where you clone the OpenCV and Pangolin)
+cd ~/Dev
+cd gtsam #change the name corresponding to your folder name
+```
+
 
 # 3. Install OpenCV 3.2.0
 
