@@ -101,13 +101,7 @@ chmod +x build.sh
 Download the dataset from link: https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.
 Make a folder named "dataset" in ORB-SLAM3, and unzip the dataset into this folder.
 ```shell
-cd ~
-mkdir -p Datasets/EuRoc
-cd Datasets/EuRoc/
-wget -c http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.zip
-mkdir MH01
-unzip MH_01_easy.zip -d MH01/
-
+#here we use MH_01_easy dataset
 ```
 Similar for another datasets in EuRoc see here [https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets]
 
