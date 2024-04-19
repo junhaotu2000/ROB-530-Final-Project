@@ -1,4 +1,4 @@
-# Installation guide for ORB-SLAM3
+# Installation guide for ORB-SLAM3-combined
 # Prerequisites
 Make sure your system is up to date and has the required tools installed:
 ```shell
