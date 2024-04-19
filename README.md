@@ -116,5 +116,5 @@ chmod +x build.sh
 
 
 # Reference:
-Uz-SLAMLab, “GitHub - UZ-SLAMLab/ORB_SLAM3: ORB-SLAM3: an accurate Open-Source library for Visual, Visual-Inertial and Multi-Map SLAM,” GitHub. https://github.com/UZ-SLAMLab/ORB_SLAM3
-Orsalmon, “GitHub - orsalmon/ORB_SLAM2_GTSAM: ORB-SLAM2 Library with an extension of GTSAM Factor Graph Streaming,” GitHub. https://github.com/orsalmon/ORB_SLAM2_GTSAM
+1. Uz-SLAMLab, “GitHub - UZ-SLAMLab/ORB_SLAM3: ORB-SLAM3: an accurate Open-Source library for Visual, Visual-Inertial and Multi-Map SLAM,” GitHub. https://github.com/UZ-SLAMLab/ORB_SLAM3
+2. Orsalmon, “GitHub - orsalmon/ORB_SLAM2_GTSAM: ORB-SLAM2 Library with an extension of GTSAM Factor Graph Streaming,” GitHub. https://github.com/orsalmon/ORB_SLAM2_GTSAM
