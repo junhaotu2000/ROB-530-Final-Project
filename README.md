@@ -37,8 +37,8 @@ evo_res results/*.zip -p --save_table results/table.csv
 ## Results
 
 Trajactory of modified ORB-SLAM3 and VINS-Fusion on EuRoC MH-05 dataset
-![Example Image](media/ORB_MH05_Stereo_IMU.png)
-![Example Image](media/VINS_MH05_Stereo_IMU.png)
+![Example Image](media/ORB_MH05_Stereo_IMU.jpeg)
+![Example Image](media/VINS-MH05_stetro_IMU.png)
 
 Error of postion and angle degree using ORB-SLAM3 and VINS-Fusion on EuRoC MH-01 and MH-05 datasets
 
