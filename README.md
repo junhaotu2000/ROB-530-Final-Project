@@ -31,7 +31,8 @@ evo_ape tum truth.txt after.txt -va --plot --plot_mode xyz --save_results result
 ```
 To compare position error or degree error seperately
 ```
-evo_ape tum truth.txt result.txt -va --plot --plot_mode xyz --correct_scale -r trans_part/angle_deg --save_results results/after.zip
+evo_ape tum truth.txt result.txt -va --plot --plot_mode xyz --correct_scale -r trans_part --save_results results/after.zip
+evo_ape tum truth.txt result.txt -va --plot --plot_mode xyz --correct_scale -r angle_deg --save_results results/after.zip
 ```
 
 Generate the ASE comparison plots by 
