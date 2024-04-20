@@ -26,9 +26,14 @@ evo_traj tum --ref=truth.txt before_filter.txt after_filter.txt -p -va
 To compare the ASE(Absolute Pose Errors) of results before and after implementing bilateral filter. Make a new directory, evaluate the ASE of both results and save them as zip files in that directory 
 ```
 mkdir results
-evo_ape tum truth.txt before.txt -va --plot --plot_mode xyz --correct_scale -r trans_part/angle_deg --save_results results/before.zip
-evo_ape tum truth.txt after.txt -va --plot --plot_mode xyz --correct_scale -r trans_part/angle_deg --save_results results/after.zip
+evo_ape tum truth.txt before.txt -va --plot --plot_mode xyz --save_results results/before.zip
+evo_ape tum truth.txt after.txt -va --plot --plot_mode xyz --save_results results/after.zip
 ```
+To compare position error or degree error seperately
+```
+evo_ape tum truth.txt result.txt -va --plot --plot_mode xyz --correct_scale -r trans_part/angle_deg --save_results results/after.zip
+```
+
 Generate the ASE comparison plots by 
 ```
 evo_res results/*.zip -p --save_table results/table.csv
