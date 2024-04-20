@@ -52,3 +52,8 @@ Error of postion and angle degree using ORB-SLAM3 and VINS-Fusion on EuRoC MH-01
 
 ### Stereo & IMU:
 <img src="media/Stereo_IMU_results.png" style="width:600px; height:auto;" />
+
+## Reference:
+1. Uz-SLAMLab, “GitHub - UZ-SLAMLab/ORB_SLAM3: ORB-SLAM3: an accurate Open-Source library for Visual, Visual-Inertial and Multi-Map SLAM,” GitHub. https://github.com/UZ-SLAMLab/ORB_SLAM3
+2. Orsalmon, “GitHub - orsalmon/ORB_SLAM2_GTSAM: ORB-SLAM2 Library with an extension of GTSAM Factor Graph Streaming,” GitHub. https://github.com/orsalmon/ORB_SLAM2_GTSAM
+3. OpenCV, “Open Source Computer Vision Library,” GitHub. https://github.com/opencv/opencv
