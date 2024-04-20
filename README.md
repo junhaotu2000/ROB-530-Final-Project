@@ -4,7 +4,7 @@ This repo is for ROB 530 Final Project
 Abstract: In this project, two typical SLAM algorithm, ORB-SLAM3 and VINS-Fusion are implemented and optimized basing on their structure. Optimization mainly including modifications and additions related to front-end and back-end structure of each method. At the end, the results of various optimization algorithm is compared with its original implementation, following its optimization performance analyzation basing on EuRoC dataset experiments.
 
 
-Our modified ORB-SLAM3 and VINS-Fusion are included seperately in their own branches, specifically, [ORB-SLAM3-Modified](https://github.com/junhaotu2000/ROB-530-Final-Project/tree/ORB-SLAM3-Modified) and [VINS-Fusion-Modified](https://github.com/junhaotu2000/ROB-530-Final-Project/tree/VINS-Fusion-Modified)
+Our modified ORB-SLAM3 and VINS-Fusion are included seperately in their own branches, specifically, [ORB-SLAM3-Modified](https://github.com/junhaotu2000/ROB-530-Final-Project/tree/ORB-SLAM3-Modified) and [VINS-Fusion-Modified](https://github.com/junhaotu2000/ROB-530-Final-Project/tree/VINS-Fusion-Modified).
 
 You can setup each algorithm and test using [EuRoc](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets), [KITTI](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) and other open datasets. 
 
