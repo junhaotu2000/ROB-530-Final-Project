@@ -21,7 +21,7 @@ evo_ape tum truth.txt after_filter.txt -p -va
 ```
 Generate the comparison for trajectory by 
 ```
-evo_traj tum --ref=truth.txt before_filter.txt after_filter.txt -p -va 
+evo_traj tum --ref=truth.txt before_filter.txt after_filter.txt -p -va --correct_scale -r trans_part/angle_deg
 ```
 To compare the ASE(Absolute Pose Errors) of results before and after implementing bilateral filter. Make a new directory, evaluate the ASE of both results and save them as zip files in that directory 
 ```
